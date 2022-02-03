@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(TestSubmoduleLib)
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS 1)
 add_library(CoolLib SHARED cool_lib.cpp cool_lib.h)
 add_executable(Test test.cpp)
 target_link_libraries(Test CoolLib)
